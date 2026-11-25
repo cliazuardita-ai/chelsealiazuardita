@@ -1,0 +1,378 @@
+/* =========================================================
+   ZAHWA KIRANA — MODERN PURPLE GLOW PORTFOLIO
+   ========================================================= */
+
+:root {
+  --purple-950: #2e0854;
+  --purple-900: #4c1d95;
+  --purple-800: #5b21b6;
+  --purple-700: #6d28d9;
+  --purple-600: #7c3aed;
+  --purple-500: #8b5cf6;
+  --purple-400: #a78bfa;
+  --purple-300: #c4b5fd;
+  --purple-200: #ddd6fe;
+  --purple-100: #ede9fe;
+  --purple-50: #f8f6ff;
+  --white: #ffffff;
+  --text: #271540;
+  --muted: #61507a;
+  --glass: rgba(255, 255, 255, 0.72);
+  --shadow: 0 18px 50px rgba(109, 40, 217, 0.14);
+}
+
+/* ================= BASE ================= */
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(167, 139, 250, 0.08), transparent 22%), radial-gradient(circle at 90% 70%, rgba(124, 58, 237, 0.07), transparent 25%), linear-gradient(180deg, var(--purple-50) 0%, #fff 48%, #f7f4ff 100%);
+  color: var(--text);
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+::selection {
+  background: var(--purple-500);
+  color: var(--white);
+}
+
+section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  position: relative;
+}
+
+/* ================= NAVBAR ================= */
+
+.modern-navbar {
+  padding: 0.9rem 0;
+  background: rgba(46, 8, 84, 0.76) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 10px 35px rgba(46, 8, 84, 0.16);
+}
+
+.modern-navbar .navbar-brand {
+  color: #fff !important;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.modern-navbar .navbar-brand::before {
+  content: '✦ ';
+  color: var(--purple-300);
+}
+
+.modern-navbar .nav-link {
+  position: relative;
+  margin: 0 0.25rem;
+  padding: 0.55rem 0.8rem !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.modern-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 0;
+  height: 3px;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--purple-300), #fff);
+  box-shadow: 0 0 12px rgba(196, 181, 253, 0.8);
+  transition: width 0.3s ease;
+}
+
+.modern-navbar .nav-link:hover,
+.modern-navbar .nav-link.active {
+  color: #fff !important;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.45);
+}
+
+.modern-navbar .nav-link:hover::after,
+.modern-navbar .nav-link.active::after {
+  width: 55%;
+}
+
+.modern-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ================= HERO ================= */
+
+.jumbotron {
+  min-height: 650px;
+  padding: 9rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.25) 0 5%, transparent 23%), radial-gradient(circle at 85% 35%, rgba(255, 255, 255, 0.18) 0 4%, transparent 20%),
+    radial-gradient(circle at 50% 110%, rgba(255, 255, 255, 0.16), transparent 34%), linear-gradient(135deg, #5b21b6 0%, #7c3aed 42%, #8b5cf6 72%, #a78bfa 100%);
+  border-radius: 0 0 80px 80px;
+  box-shadow:
+    0 25px 70px rgba(109, 40, 217, 0.28),
+    0 0 70px rgba(139, 92, 246, 0.18);
+}
+
+.jumbotron::before,
+.jumbotron::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.jumbotron::before {
+  width: 390px;
+  height: 390px;
+  top: -210px;
+  left: -120px;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 0 90px rgba(255, 255, 255, 0.22);
+}
+
+.jumbotron::after {
+  width: 330px;
+  height: 330px;
+  right: -120px;
+  bottom: -170px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 90px rgba(255, 255, 255, 0.2);
+}
+
+.jumbotron svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 130px;
+}
+
+.profile-glow {
+  position: relative;
+  display: inline-flex;
+  padding: 8px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fff, var(--purple-200), #fff);
+  box-shadow:
+    0 0 0 7px rgba(255, 255, 255, 0.14),
+    0 0 35px rgba(255, 255, 255, 0.5),
+    0 15px 45px rgba(46, 8, 84, 0.25);
+  animation: floatPhoto 4s ease-in-out infinite;
+}
+
+.profile-photo {
+  width: 155px;
+  height: 155px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.9) !important;
+}
+
+.jumbotron h1 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: #fff;
+  text-shadow:
+    0 5px 18px rgba(46, 8, 84, 0.24),
+    0 0 35px rgba(255, 255, 255, 0.25);
+}
+
+.jumbotron .lead {
+  margin-bottom: 1.5rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.92;
+}
+
+/* ================= HEADINGS ================= */
+
+section h2 {
+  margin-bottom: 2.2rem;
+  color: var(--purple-900);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 30px;
+  background: linear-gradient(90deg, var(--purple-300), var(--purple-600));
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.5);
+}
+
+/* ================= ABOUT ================= */
+
+#About {
+  background: rgba(255, 255, 255, 0.76);
+}
+
+#About .row.justify-content-center {
+  gap: 1.5rem;
+}
+
+#About .col-md-5 {
+  padding: 2rem;
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#About .col-md-5:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(109, 40, 217, 0.18);
+}
+
+#About p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+
+  background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.45), transparent 25%), linear-gradient(135deg, #ede9fe, #ddd6fe 45%, #c4b5fd) !important;
+}
+
+.projects-section h2 {
+  color: var(--purple-950) !important;
+}
+
+.card {
+  height: 100%;
+  border: 1px solid rgba(109, 40, 217, 0.12);
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow:
+    0 12px 35px rgba(109, 40, 217, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 24px 55px rgba(109, 40, 217, 0.2),
+    0 0 28px rgba(139, 92, 246, 0.18);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.045);
+  filter: brightness(1.05) saturate(1.08);
+}
+
+.card-body {
+  padding: 1.4rem;
+}
+
+.card-text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ================= CONTACT ================= */
+
+#contact {
+  background: radial-gradient(circle at 90% 10%, rgba(196, 181, 253, 0.22), transparent 25%), #fff;
+}
+
+#contact form {
+  padding: 2rem;
+  border: 1px solid rgba(139, 92, 246, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--shadow);
+}
+
+.form-label {
+  color: var(--purple-900);
+  font-weight: 700;
+}
+
+.form-control {
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #d5c7f7;
+  border-radius: 15px;
+  color: var(--text);
+  background: #fbfaff;
+  transition: 0.25s ease;
+}
+
+.form-control:focus {
+  border-color: var(--purple-500);
+  box-shadow:
+    0 0 0 4px rgba(139, 92, 246, 0.11),
+    0 0 18px rgba(139, 92, 246, 0.13);
+  background: #fff;
+}
+
+.btn-purple {
+  padding: 0.8rem 1.7rem;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple-700), var(--purple-500));
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.25);
+  transition: 0.3s ease;
+}
+
+.btn-purple:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 32px rgba(109, 40, 217, 0.3),
+    0 0 22px rgba(139, 92, 246, 0.3);
+}
